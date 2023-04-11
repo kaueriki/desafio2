@@ -1,39 +1,29 @@
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
-    <title>Contato</title>
-</head>
-<body background="imagens/topo.jpeg">
-     <!-- Topo -->
-    <div class="imagens/logo.jpeg">
-        <img id="logo" src="imagens/logo.jpeg" alt="logo">
-        <div class="link">
-         <a href="/">HOME</a> |
-         <a href="/quemsomos">Quem-Somos</a> |
-         <a href="/contato">Contato</a>
-        </div>
+{% extends "base.html"%}
+
+{% block conteudo %}
+
+    <!-- Texto -->
+    <div id="texto">
+
+        <div id="subtitulo"><h1>Entre em contato</h1></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos esse animi, velit quam est veritatis dignissimos. Consequatur accusamus est mollitia officiis corrupti assumenda optio modi quod! Dolor repellendus rem est.</p>
     </div>
-    <div>
-        <h1>Entre em contato</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis, in eaque inventore optio eius rem. Beatae, distinctio odit porro quibusdam libero reiciendis est, recusandae magni ipsam neque aspernatur numquam ullam!</p>
-        <hr>
-        <form= action="/action_page.php">
-        <label for="fname"> Seu e-mail:</label><br>
-        <input type="text" id="fname"
-        name="fname" <br>
-         <div>
-         <form= action="/action_page.php">
-         <label for="fname"> Assunto:</label><br>
-         <input type="text" id="fname"
-         name="fname" <br>
-         </div>
-         <div>
-         <form= action="/action_page.php">
-         <label for="fname"> Descrição:</label><br>
-         <input type="text" id="fname"
-         name="fname" <br>
-         </div>
-        <h4>Todos os direitos reservados</h4>
-    </div>
-</body>
-</html>
+    <hr>
+    <!-- Formulario -->
+
+    <form action="/action_page.php">
+        <label for="email">Seu e-mail:</label> <br>
+        <input type="text" id="email" name="email"><br>
+
+        <label for="assunto">Assunto:</label> <br>
+        <input type="text" id="assunto" name="assunto"><br>
+
+        <label for="desc">Descrição:</label><br>
+        <textarea type="textarea" name="desc" id="desc"></textarea><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+
+
+{%endblock%}

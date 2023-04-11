@@ -1,18 +1,14 @@
 from flask import Flask, render_template, url_for
-
-app = Flask(__name__)
+app = Flask("__name__", static_folder="./static")
 
 @app.route("/")
-def home():
-    return render_template('home.html')
-
-@app.route("/quemsomos")
-def quemsomos():
-    return render_template('quemsomos.html')
+def index():
+    return render_template("index.html")
 
 @app.route("/contato")
-def contato():
-    return render_template('contato.html')
+def contato(): 
+    return render_template("contato.html")
 
-if __name__ == ("__main__"):
-    app.run()
+@app.route("/quem_somos")
+def quem_somos():  
+    return render_template("quem_somos.html")

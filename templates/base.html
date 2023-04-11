@@ -1,28 +1,35 @@
 <!DOCTYPE html>
-<html lang="pt-br">
- <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %} {% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
- </head>
+    <link rel="stylesheet" href="/static/estilo.css">
+    <title>Document</title>
+</head>
 <body>
- <div class="container"> 
-    {% block content %} 
-
- <!-- Topo -->
- <div class="imagens/logo.jpeg">
-    <img id="logo" src="imagens/logo.jpeg" alt="logo">
-    <div class="link">
-     <a href="/">HOME</a> |
-     <a href="/quemsomos">Quem-Somos</a> |
-     <a href="/contato">Contato</a>
+<!-- Cabeçalho -->
+    
+<header>
+    <div class="logo">
+        <img src="static/logo.png" alt="erro logo">
     </div>
- </div>
+    
+    <nav>
+        <a href="/">Home</a>
+        <span>|</span>
+        <a href="quem_somos">Quem somos</a>
+        <span>|</span>
+        <a href="contato">Contato</a>
+    </nav>
 
-    {% endblock %}
-</body> 
+</header>
+    {% block conteudo %}
 
-</div>
+    {%endblock%}
+
+    <footer>
+        <h4>Todos os direitos reservados</h4>
+    </footer>
+</body>
 </html>
