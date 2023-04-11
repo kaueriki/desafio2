@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+ </head>
+<body>
+ <div class="container"> 
+    {% block content %} 
+
+ <!-- Topo -->
+ <div class="imagens/logo.jpeg">
+    <img id="logo" src="imagens/logo.jpeg" alt="logo">
+    <div class="link">
+     <a href="/">HOME</a> |
+     <a href="/quemsomos">Quem-Somos</a> |
+     <a href="/contato">Contato</a>
+    </div>
+ </div>
+
+    {% endblock %}
+</body> 
+
+</div>
+</html>
